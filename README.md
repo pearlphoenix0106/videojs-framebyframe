@@ -1,3 +1,9 @@
+## Updates included in this Fork
+
+- Updated code causing warnings for deprecated methods .plugin -> .registerPlugin
+- Appends buttons after playToggle
+- Added .css to package
+
 videojs-framebyframe
 ====================
 

@@ -29,7 +29,7 @@ function framebyframe(options) {
         //let fsc = document.getElementsByClassName('vjs-fullscreen-control');
         //console.log('fsc', fsc);
         options.steps.forEach(function(opt) {
-            let b = player.controlBar.addChild(
+            var b = player.controlBar.addChild(
                 new FBFButton(player, {
                     el: videojs.dom.createEl(
                         'button',
@@ -56,6 +56,6 @@ function framebyframe(options) {
 }
 
 // Cross-compatibility for Video.js 5 and 6.
-const registerPlugin = videojs.registerPlugin || videojs.plugin;
+var registerPlugin = videojs.registerPlugin || videojs.plugin;
 
 registerPlugin('framebyframe', framebyframe);

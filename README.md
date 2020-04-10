@@ -1,21 +1,9 @@
-## Updates included in this Fork
-
-- Updated code causing warnings for deprecated methods .plugin -> .registerPlugin
-- Appends buttons after playToggle
-- Added .css to package
-
 videojs-framebyframe
 ====================
 
-[![npm version](https://img.shields.io/npm/v/videojs-framebyframe.svg?style=flat)](https://www.npmjs.com/package/videojs-framebyframe)
-[![npm](https://img.shields.io/npm/dm/videojs-framebyframe.svg)]()
-[![License](https://img.shields.io/npm/l/videojs-framebyframe.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/erasche/videojs-framebyframe.svg?branch=master)](https://travis-ci.org/erasche/videojs-framebyframe)
-<a href="http://bower.io/search/?q=videojs-framebyframe">
-<img src="https://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30">
-</a>
+[![npm version](https://img.shields.io/npm/v/@douglassllc/videojs-framebyframe.svg?style=flat)](https://www.npmjs.com/package/@douglassllc/videojs-framebyframe)
+[![License](https://img.shields.io/npm/l/@douglassllc/videojs-framebyframe.svg)](LICENSE)
 
-[Check out the demo!](https://erasche.github.io/videojs-framebyframe)
 
 Allows users to step frame-by-frame through a video.
 
@@ -23,11 +11,37 @@ This has to make an unfortunate assumption about framerate, but it should be
 "ok" for general use. If you can run framerate detection on the server side,
 this plugin works perfectly for you.
 
+## Updates included in this Fork
+
+- Updated code causing warnings for deprecated methods .plugin -> .registerPlugin
+- Appends buttons after playToggle
+- Added .css to package
+
 ## Installation
 
 ```console
-$ npm install videojs-framebyframe
-$ bower install videojs-framebyframe
+$ npm install @douglassllc/videojs-framebyframe
+```
+
+## Usage
+
+```
+import 'videojs-framebyframe/videojs.framebyframe.js'
+import 'videojs-framebyframe/videojs.framebyframe.css'
+
+let options: {
+  plugins: {
+    framebyframe: {
+      fps: 30,
+      steps: [
+        { text: '< 1f', step: -1 },
+        { text: '1f >', step: 1 }
+      ]
+    }
+  }
+}
+
+let player = videojs('my-video', options)
 ```
 
 ## Framerate Issues
@@ -40,16 +54,11 @@ then you should use that and supply it to your videojs instance.
 - http://stackoverflow.com/questions/4298084/html5-frame-by-frame-viewing-frame-seeking
 - https://github.com/videojs/video.js/issues/692
 
-## Other
-
-- There's 4.X videojs code in the similarly named branch.
-
-
-## Contributors
+## Original Contributors
 
 - Helena Rasche (@erasche)
 - Miguel Grinberg (@miguelgrinberg)
 
 ## License
 
-Dual licensed under GPLv3 and MIT
+Licensed under MIT

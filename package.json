@@ -1,11 +1,11 @@
 {
-  "name": "videojs-framebyframe",
+  "name": "@douglassllc/videojs-framebyframe",
   "version": "1.1.0",
   "description": "video.js plugin that allows users to step frame-by-frame through a video.",
   "main": "videojs.framebyframe.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erasche/videojs-framebyframe.git"
+    "url": "git+https://github.com/douglassllc/videojs-framebyframe.git"
   },
   "scripts": {
     "test": "echo No tests yet!"
@@ -26,11 +26,14 @@
     "grunt-contrib-watch": ">=0.6.1",
     "grunt-jscs": "^2.7.0"
   },
-  "author": "Helena Rasche",
+  "author": "Douglass E Hock <doug@douglassllc.com> (http://douglassllc.com)",
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "contributors": [
+    "Helena Rasche (@erasche)",
+    "Miguel Grinberg (@miguelgrinberg)"
+  ],
   "bugs": {
-    "url": "https://github.com/erasche/videojs-framebyframe/issues"
+    "url": "https://github.com/douglassllc/videojs-framebyframe/issues"
   },
-  "homepage": "https://github.com/erasche/videojs-framebyframe"
+  "homepage": "https://github.com/douglassllc/videojs-framebyframe"
 }
